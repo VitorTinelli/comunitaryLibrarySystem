@@ -138,3 +138,11 @@ td, td {
     padding: 15px;
     text-align: left;
 }
+
+.cad_livro {
+    background-color: #30b572;
+}
+
+.cad_livro:hover {
+    background-color: #30b573b5;
+}

@@ -11,6 +11,7 @@ export default function Index() {
                         <input type="text" name="nome" id="nome" placeholder="Nome do livro" required/>
                         <input type="submit" value="Pesquisar" />
                     </form>
+                    <span class="cad_livro">Cadastrar Livros</span>
                     <span>Desconectar</span>
                 </div>
             </header>

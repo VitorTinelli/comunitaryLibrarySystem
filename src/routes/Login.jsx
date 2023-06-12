@@ -8,7 +8,7 @@ export default function Index(){
     const [password, setPassword] = useState("")
     const navigateTo = useNavigate()
     const createAccount = () => {
-        navigateTo("/cadastrar")
+        navigateTo("/cadastrar/user")
     }
     const handleLogin = async (e) => {
         e.preventDefault();
