@@ -27,10 +27,7 @@ export default function Index(){
     
     return (
         <>
-            <header>
-                {/* Sem header */}
-            </header>
-                <main>
+            <main>
                 <div>
                     <form action="" method="post" onSubmit={handleLogin}>
                         <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/401/8395286401_1fea63a5-e908-45e6-8121-62c66b93ece7.png?cb=1685991735" alt="Logotipo" width="150"/>
@@ -42,10 +39,7 @@ export default function Index(){
                         <small onClick={createAccount}>Ainda não está na biblioteca? Crie uma conta.</small>
                     </form>
                 </div>
-                </main>
-            <footer>
-                {/* Sem footer */}
-            </footer>
+            </main>
         </>
     )
 }

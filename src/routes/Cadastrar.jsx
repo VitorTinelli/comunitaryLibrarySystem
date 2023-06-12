@@ -33,9 +33,6 @@ export default function Cadastrar(){
 
     return (
         <>
-            <header>
-                {/* Sem header */}
-            </header>
             <main>
                 <div>
                     <form action="" method="post" onSubmit={handleCadastro}>
@@ -49,9 +46,6 @@ export default function Cadastrar(){
                     </form>
                 </div>
             </main>
-            <footer>
-                {/* Sem footer */}
-            </footer>
         </>
     )
 }
