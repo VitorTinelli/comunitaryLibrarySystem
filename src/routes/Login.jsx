@@ -18,7 +18,7 @@ export default function Index(){
             password
           });
 
-          if (response.status === 201) {
+          if (response.status === 200) {
             console.log('Login realizado com sucesso!');
           } } catch (error) {
           console.error(error);
