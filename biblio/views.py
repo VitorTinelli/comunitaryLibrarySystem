@@ -2,19 +2,27 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from biblio.models import User
 from biblio.models import Books
+from biblio.models import AcceptedBooks
 from rest_framework import generics, status
 from rest_framework.response import Response
 from biblio.serealizer import UserSerealizer
 from biblio.serealizer import BookSerealizer
+from biblio.serealizer import AcceptedBookSerealizer
 
 # Create your views here.
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerealizer
+
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Books.objects.all()
     serializer_class = BookSerealizer
+
+class AcceptedBooksViewSet(viewsets.ModelViewSet):
+    queryset = AcceptedBooks.objects.all()
+    serializer_class = AcceptedBookSerealizer
+
 class LoginView(generics.CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerealizer
