@@ -8,7 +8,8 @@ main {
     justify-content: center;
     align-items: center;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
+    
 }
 
 form {
@@ -31,7 +32,7 @@ input {
     color: #333;
 }
 
-input:nth-child(6){
+.cadastrar{
     background-color: #115571;
     margin-top: 20px;
     border: 1px solid #115571;
@@ -39,7 +40,7 @@ input:nth-child(6){
     color: white;
 }
 
-input:nth-child(6):hover{
+.cadastrar:hover{
     background: none;
     transition: 0.5s;
     border: 1px solid #115571;

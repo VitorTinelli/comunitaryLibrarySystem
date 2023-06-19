@@ -1,7 +1,11 @@
 import "../css/index.css"
+import { useNavigate } from "react-router-dom"
 
 export default function Index() {
-    
+    const navigateTo = useNavigate()
+    const goLivros = () => {
+        navigateTo('/cadastrar/livros')
+    }
     return (
         <>
             <header>
@@ -11,12 +15,12 @@ export default function Index() {
                         <input type="text" name="nome" id="nome" placeholder="Nome do livro" required/>
                         <input type="submit" value="Pesquisar" />
                     </form>
-                    <span class="cad_livro">Cadastrar Livros</span>
+                    <span class="cad_livro" onClick={goLivros}>Cadastrar Livros</span>
                     <span>Desconectar</span>
                 </div>
             </header>
             <main>
-                <section class="banner">
+                <section class="banner">    
                     <div>
                         <h3>Melhor plataforma de livros virtuais</h3>
                         <h1>Os livros são uma extensão da <span>memória e da imaginação.</span></h1>

@@ -8,7 +8,7 @@ export default function Index(){
     const [password, setPassword] = useState("")
     const navigateTo = useNavigate()
     const createAccount = () => {
-        navigateTo("/cadastrar/user")
+        navigateTo("/cadastrar/users")
     }
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -20,6 +20,7 @@ export default function Index(){
 
           if (response.status === 200) {
             console.log('Login realizado com sucesso!');
+            navigateTo("/index")
           } } catch (error) {
           console.error(error);
         }
@@ -35,7 +36,7 @@ export default function Index(){
                         <input type="text" name="email" id="email" placeholder="E-mail" required value={email} onChange={(mail) => setEmail(mail.target.value)}/>
                         <input type="password" name="senha" id="senha" placeholder="Senha" required value={password} onChange={(pass) => setPassword(pass.target.value)}/>
                         <small>Esqueceu sua senha?</small>
-                        <input type="submit" value="Entrar"/>
+                        <input type="submit" value="Entrar" className="cadastrar"/>
                         <small onClick={createAccount}>Ainda não está na biblioteca? Crie uma conta.</small>
                     </form>
                 </div>
