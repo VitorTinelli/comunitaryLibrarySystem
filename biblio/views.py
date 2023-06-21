@@ -9,7 +9,6 @@ from biblio.serealizer import UserSerealizer
 from biblio.serealizer import BookSerealizer
 from biblio.serealizer import AcceptedBookSerealizer
 
-# Create your views here.
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()

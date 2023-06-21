@@ -9,7 +9,7 @@ from rest_framework import routers
 router = routers.DefaultRouter()
 router.register(r'usuarios', UserViewSet)
 router.register(r'livros', BookViewSet)
-router.register(r'livros/aceitos', AcceptedBooksViewSet)
+router.register(r'aceitos', AcceptedBooksViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

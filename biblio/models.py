@@ -34,4 +34,7 @@ class AcceptedBooks(models.Model):
     language = models.CharField(max_length = 100)
     wikipedia = models.TextField()
     image = models.TextField()
-    count = models.IntegerField()
+    count = models.IntegerField(default=0)
+    
+    def __str__(self):
+        return self.title
