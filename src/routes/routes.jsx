@@ -6,6 +6,7 @@ import Index from './Index.jsx';
 import Login from './Login.jsx';
 import Livros from './Livros.jsx';
 import Cadastrar from './Cadastrar.jsx';
+import Aprovar from './aprovar.jsx';
 
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom'
 
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
       {
         path: '/cadastrar/livros',
         element: <Livros />,
-      }
+      },
+      {
+        path: '/aprovar',
+        element: <Aprovar />,
+      },
     ]
   }
 ])
