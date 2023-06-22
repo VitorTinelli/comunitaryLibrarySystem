@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export default function Aprovar() {
@@ -63,6 +63,7 @@ export default function Aprovar() {
           <h2>Detalhes do Livro:</h2>
           <p>Título: {livroEscolhido.title}</p>
           <p>Autor: {livroEscolhido.author}</p>
+          <p>Gênero: {livroEscolhido.genre}</p>
           <p>Ano: {livroEscolhido.year}</p>
           <p>Edição: {livroEscolhido.edition}</p>
           <p>Páginas: {livroEscolhido.pages}</p>
@@ -88,6 +89,7 @@ export default function Aprovar() {
             <th>Id</th>
             <th>Título</th>
             <th>Autor</th>
+            <th>Gênero</th>
             <th>Ano</th>
             <th>Edição</th>
             <th>Páginas</th>
@@ -102,6 +104,7 @@ export default function Aprovar() {
               <td>{livro.id}</td>
               <td>{livro.title}</td>
               <td>{livro.author}</td>
+              <td>{livro.genre}</td>
               <td>{livro.year}</td>
               <td>{livro.edition}</td>
               <td>{livro.pages}</td>
