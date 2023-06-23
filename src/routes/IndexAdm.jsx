@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function Index() {
+export default function IndexAdm() {
     const [livros, setLivros] = useState([]);
     const [pesquisa, setPesquisa] = useState("");
     const [livrosFiltrados, setLivrosFiltrados] = useState([]);
@@ -11,6 +11,9 @@ export default function Index() {
 
     const goLivros = () => {
         navigateTo("/cadastrar/livros");
+    };
+    const goDoacoes = () => {
+        navigateTo("/aprovar");
     };
 
     const disconect = () => {
@@ -20,6 +23,17 @@ export default function Index() {
     useEffect(() => {
         mostrarLivros();
     }, []);
+
+    const deletar = async (id) => {
+        try {
+          const response = await axios.delete(`http://localhost:8000/aceitos/${id}`);
+          if (response.status === 204) {
+            mostrarLivros();
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      };
 
     const mostrarLivros = async () => {
         try {
@@ -58,6 +72,9 @@ export default function Index() {
                     <span className="cad_livro" onClick={goLivros}>
                         Cadastrar Livros
                     </span>
+                    <span className="cad_livro" onClick={goDoacoes}>
+                        Doações
+                    </span>
                     <span onClick={disconect}>Desconectar</span>
                 </div>
             </header>
@@ -84,6 +101,8 @@ export default function Index() {
                         <th>N° páginas</th>
                         <th>Idioma</th>
                         <th>Capa</th>
+                        <th>Wiki</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -99,8 +118,12 @@ export default function Index() {
                                 <td>{livro.pages}</td>
                                 <td>{livro.language}</td>
                                 <td>
-                                    <a href={livro.wikipedia}>Clique Aqui</a>
+                                    <a href={livro.image}>Aqui</a>
                                 </td>
+                                <td>
+                                    <a href={livro.wikipedia}>Aqui</a>
+                                </td>
+                                <td><button onClick={() => deletar(livro.id)}>Deletar</button></td>
                             </tr>
                         ))}
                 </tbody>
@@ -117,6 +140,8 @@ export default function Index() {
                         <th>N° páginas</th>
                         <th>Idioma</th>
                         <th>Capa</th>
+                        <th>Wiki</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -133,8 +158,12 @@ export default function Index() {
                                 <td>{livro.pages}</td>
                                 <td>{livro.language}</td>
                                 <td>
-                                    <a href={livro.wikipedia}>Clique Aqui</a>
+                                    <a href={livro.image}>Clique Aqui</a>
                                 </td>
+                                <td>
+                                    <a href={livro.wikipedia}>Aqui</a>
+                                </td>
+                                <td><button onClick={() => deletar(livro.id)}>Deletar</button></td>
                             </tr>
                         ))}
                 </tbody>

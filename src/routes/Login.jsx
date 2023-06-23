@@ -18,10 +18,15 @@ export default function Index(){
             password
           });
 
-          if (response.status === 200) {
+          if (response.status === 200) { 
+            console.log('Login realizado com sucesso!');
+            navigateTo("/index/adm")
+          }
+          else if (response.status === 201){
             console.log('Login realizado com sucesso!');
             navigateTo("/index")
-          } } catch (error) {
+          }
+          } catch (error) {
           console.error(error);
         }
       };
