@@ -30,7 +30,9 @@ class LoginView(generics.CreateAPIView):
         email = request.data['email']
         password = request.data['password']
 
-        if (self.queryset.filter(email = email, password=password).first() is not None):
+        if (self.queryset.filter(email = email, password=password, isAdm=True).first() is not None):
             return Response(status=status.HTTP_200_OK)
+        elif (self.queryset.filter(email = email, password=password, isAdm=False).first() is not None):
+            return Response(status=status.HTTP_201_CREATED)
         else:
             return Response(status=status.HTTP_401_UNAUTHORIZED, data={'erro':'Usuário ou senha inválidos'})

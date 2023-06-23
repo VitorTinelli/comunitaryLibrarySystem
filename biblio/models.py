@@ -9,7 +9,7 @@ class User(models.Model):
     isAdm = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.username
+        return self.isAdm
 
 class Books(models.Model):
     title = models.CharField(max_length = 100)
