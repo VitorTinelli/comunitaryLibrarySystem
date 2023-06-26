@@ -10,7 +10,7 @@ export default function IndexAdm() {
     const navigateTo = useNavigate();
 
     const goLivros = () => {
-        navigateTo("/cadastrar/livros");
+        navigateTo("/cadastrar/livros/adm");
     };
     const goDoacoes = () => {
         navigateTo("/aprovar");
@@ -81,7 +81,7 @@ export default function IndexAdm() {
             <main>
                 <section className="banner">
                     <div>
-                        <h3>Melhor plataforma de livros virtuais</h3>
+                        <h3>Melhor plataforma de livros físicos</h3>
                         <h1>Os livros são uma extensão da <span>memória e da imaginação.</span></h1>
                         <p>Livros em inglês e português!</p>
                         <button>Saiba mais</button>
@@ -118,12 +118,12 @@ export default function IndexAdm() {
                                 <td>{livro.pages}</td>
                                 <td>{livro.language}</td>
                                 <td>
-                                    <a href={livro.image}>Aqui</a>
+                                    <a href={livro.image}>Clique Aqui</a>
                                 </td>
                                 <td>
-                                    <a href={livro.wikipedia}>Aqui</a>
+                                    <a href={livro.wikipedia}>Clique Aqui</a>
                                 </td>
-                                <td><button onClick={() => deletar(livro.id)}>Deletar</button></td>
+                                <td><button className="botaovermelho" onClick={() => deletar(livro.id)}>Deletar</button></td>
                             </tr>
                         ))}
                 </tbody>
@@ -161,9 +161,9 @@ export default function IndexAdm() {
                                     <a href={livro.image}>Clique Aqui</a>
                                 </td>
                                 <td>
-                                    <a href={livro.wikipedia}>Aqui</a>
+                                    <a href={livro.wikipedia}>Clique Aqui</a>
                                 </td>
-                                <td><button onClick={() => deletar(livro.id)}>Deletar</button></td>
+                                <td><button  className="botaovermelho" onClick={() => deletar(livro.id)}>Deletar</button></td>
                             </tr>
                         ))}
                 </tbody>

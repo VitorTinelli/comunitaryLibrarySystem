@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import axios from "axios"
 import "../css/login.css"
 
-export default function Cadastrar(){
+export default function CadastrarADM(){
     const [title, setTitle] = useState("")
     const [author, setAuthor] = useState("")
     const [genre, setGenre] = useState("")
@@ -33,7 +33,7 @@ export default function Cadastrar(){
 
           if (response.status === 201) {
             console.log('Cadastro realizado com sucesso!');
-            navigateTo('/index')
+            navigateTo('/index/adm')
           } } catch (error) {
           console.error(error);
         }

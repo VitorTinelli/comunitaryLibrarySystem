@@ -124,6 +124,38 @@ header div span {
     font-size: 13px;
 }
 
+.botaovermelho {
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #F74044;
+    border-radius: 5px;
+    width: auto;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 13px;
+}
+
+.botaovermelho:hover {
+    background-color: #f74043b5;
+}
+
+.botaoverde {
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #30b572;
+    border-radius: 5px;
+    width: auto;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 13px;
+}
+
+.botaoverde:hover {
+    background-color: #30b573b5;
+}
+
 header div span:hover{
     background-color: #f74043b5;
 }
@@ -162,5 +194,41 @@ table tr:hover {background-color: #ddd;}
 }
 
 .cad_livro:hover {
+    background-color: #30b573b5;
+}
+
+.botaovermelho1 {
+    margin: auto;
+    padding: 15px;
+    background-color: #F74044;
+    border-radius: 5px;
+    width: 300px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: block;
+    font-size: 13px; 
+    margin-bottom: 20px;
+}
+
+.botaovermelho1:hover {
+    background-color: #f74043b5;
+}
+
+.botaoverde1 {
+    padding: 15px;
+    background-color: #30b572;
+    border-radius: 5px;
+    width: 300px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 13px;
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.botaoverde1:hover {
     background-color: #30b573b5;
 }

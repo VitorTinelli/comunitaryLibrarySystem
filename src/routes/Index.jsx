@@ -64,7 +64,7 @@ export default function Index() {
             <main>
                 <section className="banner">
                     <div>
-                        <h3>Melhor plataforma de livros virtuais</h3>
+                        <h3>Melhor plataforma de livros físicos</h3>
                         <h1>Os livros são uma extensão da <span>memória e da imaginação.</span></h1>
                         <p>Livros em inglês e português!</p>
                         <button>Saiba mais</button>
@@ -78,11 +78,12 @@ export default function Index() {
                     <tr>
                         <th>Título</th>
                         <th>Autor</th>
-                        <th>Assunto</th>
+                        <th>Gênero</th>
                         <th>Ano</th>
                         <th>Edição</th>
                         <th>N° páginas</th>
                         <th>Idioma</th>
+                        <th>Wiki</th>
                         <th>Capa</th>
                     </tr>
                 </thead>
@@ -101,6 +102,9 @@ export default function Index() {
                                 <td>
                                     <a href={livro.wikipedia}>Clique Aqui</a>
                                 </td>
+                                <td>
+                                    <a href={livro.image}>Clique Aqui</a>
+                                </td>
                             </tr>
                         ))}
                 </tbody>
@@ -111,11 +115,12 @@ export default function Index() {
                     <tr>
                         <th>Título</th>
                         <th>Autor</th>
-                        <th>Assunto</th>
+                        <th>Gênero</th>
                         <th>Ano</th>
                         <th>Edição</th>
                         <th>N° páginas</th>
                         <th>Idioma</th>
+                        <th>Wiki</th>
                         <th>Capa</th>
                     </tr>
                 </thead>
@@ -134,6 +139,9 @@ export default function Index() {
                                 <td>{livro.language}</td>
                                 <td>
                                     <a href={livro.wikipedia}>Clique Aqui</a>
+                                </td>
+                                <td>
+                                    <a href={livro.image}>Clique Aqui</a>
                                 </td>
                             </tr>
                         ))}
