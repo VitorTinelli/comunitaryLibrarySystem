@@ -6,10 +6,10 @@ class User(models.Model):
     username = models.CharField(max_length = 50)
     email = models.EmailField()
     password = models.CharField(max_length = 20)
-    isAdm = models.BooleanField(serialize=False)
+    isAdm = models.BooleanField(default=False)
 
-    def __str__(self):
-        return self.username
+    def __boolean__(self):
+        return self.isAdm
 
 class Books(models.Model):
     title = models.CharField(max_length = 100)
@@ -19,9 +19,22 @@ class Books(models.Model):
     edition = models.CharField(max_length = 100)
     pages = models.IntegerField()
     language = models.CharField(max_length = 100)
-    wiki = models.TextField()
-    pdf = models.TextField()
-    count = models.IntegerField()
+    image = models.TextField()
 
+    def __str__(self):
+        return self.title
+
+class AcceptedBooks(models.Model):
+    title = models.CharField(max_length = 100)
+    author = models.CharField(max_length = 100)
+    genre = models.CharField(max_length = 100)
+    year = models.CharField(max_length = 4)
+    edition = models.CharField(max_length = 100)
+    pages = models.IntegerField()
+    language = models.CharField(max_length = 100)
+    wikipedia = models.TextField()
+    image = models.TextField()
+    count = models.IntegerField(default=0)
+    
     def __str__(self):
         return self.title

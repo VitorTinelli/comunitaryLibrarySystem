@@ -40,8 +40,6 @@ INSTALLED_APPS = [
     'biblio',
     'rest_framework',
     "corsheaders",
-
-
 ]
 
 MIDDLEWARE = [
