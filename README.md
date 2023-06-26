@@ -1,27 +1,27 @@
 # Solução focada em arrecadação de livros doados (e sua apresentação aos usuários)
 
 Ferramentas utilizadas:
-BackEnd: django (python) 
-         django-cors-headers
-         djamgo-rest-framework
+BackEnd:<br> django (python) <br>
+             django-cors-headers <br>
+             djamgo-rest-framework <br>
 
-FrontEnd: Vite (React + JS)
-          axios
+FrontEnd: <br>Vite (React + JS) <br>
+              axios <br>
 
 
-Funcionalidades disponiveis:
-Cadastro/Login de usuários;
-Login para Usuários Padrão e Administradores (mesma página);
-Sistema de doação de livros;
-Index para amostra dos livros dísponiveis (todos e últimos 5 doados);
-Mecanismo para pesquisa de livros.
+Funcionalidades disponiveis: <br>
+Cadastro/Login de usuários; <br>
+Login para Usuários Padrão e Administradores (mesma página); <br>
+Sistema de doação de livros; <br>
+Index para amostra dos livros dísponiveis (todos e últimos 5 doados); <br>
+Mecanismo para pesquisa de livros. <br>
 
-Para administradores:
-Direito para apagar livros aprovados;
-Tela para aprovar ou desaprovar livros enviados por usuários.
+Para administradores: <br>
+Direito para apagar livros aprovados; <br>
+Tela para aprovar ou desaprovar livros enviados por usuários. <br>
 
-Autores:
-Rafael Garcia de Rocchi;
-Vitor Muneretto Tinelli.
+Autores: <br>
+Rafael Garcia de Rocchi; <br>
+Vitor Muneretto Tinelli. <br>
 
 
