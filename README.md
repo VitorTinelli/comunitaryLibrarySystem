@@ -22,6 +22,9 @@ Mecanismo para pesquisa de livros. <br>
 Direito para apagar livros aprovados; <br>
 Tela para aprovar ou desaprovar livros enviados por usuários. <br>
 
+<h4>Tutor: </h4>
+Belone Dordete Fraga<br>
+
 <h4>Autores: </h4>
 Rafael Garcia de Rocchi; <br>
 Vitor Muneretto Tinelli. <br><br><br>
