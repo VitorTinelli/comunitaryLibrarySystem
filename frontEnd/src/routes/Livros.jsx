@@ -15,7 +15,6 @@ export default function Cadastrar(){
     const [wikipedia, setWiki] = useState("")
 
     const navigateTo = useNavigate()
-    
     const handleCadastro = async (e) => {
         e.preventDefault();
         try {
@@ -32,8 +31,15 @@ export default function Cadastrar(){
           });
 
           if (response.status === 201) {
-            console.log('Cadastro realizado com sucesso!');
+            
+            if (localStorage.teste == 1){
+              navigateTo('/index/adm')
+            } else if (localStorage.teste == 2){
             navigateTo('/index')
+            } else {
+              window.alert('Você precisa estar logado para doar livros!');
+              navigateTo('/')
+            }
           } } catch (error) {
           console.error(error);
         }

@@ -10,19 +10,34 @@ export default function IndexAdm() {
     const navigateTo = useNavigate();
 
     const goLivros = () => {
-        navigateTo("/cadastrar/livros/adm");
+        navigateTo("/cadastrar/livros");
     };
     const goDoacoes = () => {
         navigateTo("/aprovar");
     };
 
     const disconect = () => {
+        localStorage.teste = 0;
         navigateTo("/")
     }
 
     useEffect(() => {
         mostrarLivros();
     }, []);
+
+    useEffect(() => {
+        verLogin();
+    }, []);
+
+    const verLogin = () => {
+        
+        if (localStorage.teste == 0) {
+            navigateTo("/");
+        }
+        if (localStorage.teste == 2) {
+            navigateTo("/index");
+        }
+    }
 
     const deletar = async (id) => {
         try {
