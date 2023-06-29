@@ -16,9 +16,26 @@ export default function Aprovar() {
   const [wikipedia, setWikipedia] = useState("");
   const [livroEscolhido, setLivroEscolhido] = useState(null);
 
+  const navigateTo = useNavigate();
+
   useEffect(() => {
     mostrarLivros();
   }, []);
+
+  useEffect(() => {
+    verLogin();
+  }, []);
+
+  const verLogin = () => {
+    if (localStorage.teste == 0) {
+        window.alert('Você precisa estar logado!');
+        navigateTo("/");
+    }
+    if (localStorage.teste == 2) {
+      window.alert('Você não tem acesso a essa página!');
+        navigateTo("/index");
+    }
+}
 
   const mostrarLivros = async () => {
     try {

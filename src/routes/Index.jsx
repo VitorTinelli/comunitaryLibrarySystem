@@ -15,11 +15,26 @@ export default function Index() {
 
     const disconect = () => {
         navigateTo("/")
+        localStorage.teste = 0;
     }
 
     useEffect(() => {
         mostrarLivros();
     }, []);
+
+    useEffect(() => {
+        verLogin();
+    }, []);
+
+    const verLogin = () => {
+        
+        if (localStorage.teste == 0) {
+            navigateTo("/");
+        }
+        if (localStorage.teste == 1) {
+            navigateTo("/index/adm");
+        }
+    }
 
     const mostrarLivros = async () => {
         try {
