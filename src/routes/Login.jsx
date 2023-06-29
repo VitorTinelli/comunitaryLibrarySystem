@@ -31,12 +31,10 @@ export default function Index() {
         password
       });
       if (response.status === 200) {
-        console.log('Login realizado com sucesso!');
         localStorage.teste = 1;
         navigateTo("/index/adm");
       }
       else if (response.status === 201) {
-        console.log('Login realizado com sucesso!');
         localStorage.teste = 2;
         navigateTo("/index")
         
